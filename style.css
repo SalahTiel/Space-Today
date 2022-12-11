@@ -1,0 +1,181 @@
+:root {
+  --primary-color: hsl(252, 92%, 76%);
+  --second-color: #3F10A4;
+  --common-text: hsl(0, 0%, 93%);
+  --background-one: #1E304A;
+  --background-two: #1A1F34;
+  --background-three: #202C56;
+}
+.mars:root{
+  --primary-color: hsl(18, 91%, 40%);
+  --second-color: #922112;
+  --common-text: hsl(0, 2%, 10%);
+  --background-one: #dac9c3;
+  --background-two: #f0e6e6;
+  --background-three: #202C56;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--background-one);
+}
+.container {
+  margin-inline: 1.5rem
+}
+header {
+  z-index: initial;
+  display: flex;
+  height: 8vh;
+  border-radius: 0px 0px 0px 25px;
+  background-color: var(--primary-color);
+}
+div.header-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  margin-left: -1rem;
+  padding: 0.5rem;
+  border-radius: 25px;
+  font: 700 1rem 'inter';
+  text-decoration: none;
+  color: var(--common-text);
+  background-color: var(--background-one);
+}
+.logo span {
+  color: var(--primary-color);
+}
+.switch-expedition {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.2rem;
+  border-radius: 25px;
+  background-color: var(--background-one);
+}
+.switch-expedition input {
+  display: none;
+}
+.switch-expedition label {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 25px;
+  transition: all 300ms;
+}
+label[for='moon'] {
+  background-color: hsl(252, 92%, 76%);
+}
+label[for='mars'] {
+  background-color: #C54109;
+}
+.switch-expedition input:checked+label {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid white;
+  transition: all 300ms;
+}
+/*HOME*/
+section.home {
+  height: 92vh;
+  background-color: var(--background-one);
+}
+#moon{
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  z-index: 0;
+  clip-path: circle(62% at 85% 60%);
+  background-color: var(--primary-color);
+}
+h3{
+  position: absolute;
+  top: 9rem;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 2;
+  width: 80%;
+  text-align: right;
+  font: 400 1.1rem 'IBM+Plex+Sans', sans-serif;
+  color: var(--common-text);
+}
+h1 {
+  position: absolute;
+  top: 11rem;
+  left: 50%;
+  z-index: 2;
+  width: 80%;
+  transform: translate(-50%);
+  text-transform: uppercase;
+  text-align: right;
+  font: 700 3rem 'IBM+Plex+Sans', sans-serif;
+  color: var(--second-color);
+}
+#astronaut{
+  max-height: 50vh;
+  position: absolute;
+  z-index: 1;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: astronaut infinite 10s ;
+}
+.transition-box{
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  min-height: 20vh;
+  padding: 1rem;
+  border-radius: 25px 25px 0 0;
+  text-align: center;
+  font: 700 1.5rem 'IBM+Plex+Sans', sans-serif;
+  color: var(--primary-color);
+  background-color: var(--background-two);
+}
+.transition-box :first-child{
+  font: 400 1.1rem 'IBM+Plex+Sans', sans-serif;
+  color: var(--common-text);
+}
+.transition-box button{
+  width: 12rem;
+  height: 3.5rem;
+  margin-top: 0.5rem;
+  border-radius: 15px;
+  border-style: none;
+  font: 700 1rem 'IBM+Plex+Sans', sans-serif;
+  color: var(--common-text);
+  background-color: var(--primary-color);
+  transition: all 300ms;
+}
+.transition-box button:hover{
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+/*ABOUT US*/
+section.about-us{
+  background-color: red;
+}
+
+.invisible{
+  display: none;
+}
+/*animations*/
+@keyframes astronaut{
+  25%{
+    transform: translate(-52%, 5px) rotate(3deg);
+    }
+  50%{
+    transform: translate(-53%, 3px) rotate(5deg);
+  }
+  75%{
+    transform: translate(-46%, -8px) rotate(2deg);
+  }
+  100%{
+    transform: translate() rotate();
+  }
+}
