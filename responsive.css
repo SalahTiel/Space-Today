@@ -5,4 +5,8 @@
   #astronaut{
     height: 50%;
   }
+  .box-icons {
+    width: 8rem;
+    height: 10rem;
+  }
 }
